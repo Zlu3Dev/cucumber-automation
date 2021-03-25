@@ -19,7 +19,7 @@ public class stepDefinition {
     public void main_page(){
         /*
         using HeadLess options
-        * */
+        */
         System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/src/main/resources/chromedriver/chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200",
