@@ -1,0 +1,58 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Home page Default login",
+        "description": "",
+        "id": "application-login;home-page-default-login",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 9722871500,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User is on Paradyme Management page",
+            "match": {
+              "location": "stepDefinition.main_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1893038900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User click our culture link",
+            "match": {
+              "location": "stepDefinition.culture_link()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 30908100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Culture page should display",
+            "match": {
+              "location": "stepDefinition.culture_page()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Application Login",
+    "description": "",
+    "id": "application-login",
+    "keyword": "Feature",
+    "uri": "src/test/java/features/Login.feature"
+  }
+]
