@@ -7,6 +7,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -22,24 +23,24 @@ public class stepDefinition {
         */
         System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/src/main/resources/chromedriver/chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200",
-                "--ignore-certificate-errors","--disable-extensions",
-                "--no-sandbox","--disable-dev-shm-usage");
+        options.addArguments("--headless", "--disable-gpu");
         driver = new ChromeDriver(options);
         driver.navigate().to("http://www.paradymemanagement.com/");
     }
-    @When("User click our culture link")
-    public void culture_link(){
-        driver.findElement(By.xpath("//*[@id=\"menu-item-890\"]/a")).click();
+    @When("User click main page")
+    public void culture_link() throws InterruptedException {
+        WebElement element =  driver.findElement(By.xpath("//*[@id=\"logo-container\"]/a/img"));
+        element.click();
     }
-    @Then("Culture page should display")
+    @Then("Main page should display")
     public void culture_page(){
-        WebElement element = driver.findElement(By.xpath("//*[@id=\"section-1\"]/div[4]/div[2]/h3"));
+        WebElement element = driver.findElement(By.xpath("//*[@id=\"whatwedo\"]/div/h2"));
         System.out.println(element);
-        if (element.getText().contentEquals("How we succeed")){
+        if (element.getText().contentEquals("What We Do")){
             System.out.println("pass");
         }else{
             System.out.println("fail");
         }
     }
+
 }

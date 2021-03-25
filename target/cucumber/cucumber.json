@@ -12,7 +12,7 @@
         "steps": [
           {
             "result": {
-              "duration": 15833308200,
+              "duration": 17850076500,
               "status": "passed"
             },
             "line": 5,
@@ -24,11 +24,11 @@
           },
           {
             "result": {
-              "duration": 3959664600,
+              "duration": 2040771400,
               "status": "passed"
             },
             "line": 6,
-            "name": "User click our culture link",
+            "name": "User click main page",
             "match": {
               "location": "stepDefinition.culture_link()"
             },
@@ -36,11 +36,11 @@
           },
           {
             "result": {
-              "duration": 67433800,
+              "duration": 149400700,
               "status": "passed"
             },
             "line": 7,
-            "name": "Culture page should display",
+            "name": "Main page should display",
             "match": {
               "location": "stepDefinition.culture_page()"
             },
